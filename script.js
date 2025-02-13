@@ -2,7 +2,7 @@ const gallery = document.getElementById('gallery');
 const imgElement = document.getElementById('image');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
-const enlargeButton = document.getElementById('enlarge');
+
 const enlargedContainer = document.getElementById('enlarged-container');
 const enlargedImage = document.getElementById('enlarged-image');
 const closeButton = document.getElementById('close');
