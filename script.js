@@ -32,17 +32,6 @@ function loadImages() {
     updateImage();
 }
 
-// Funzione per ingrandire l'immagine
-enlargeButton.addEventListener('click', () => {
-    enlargedImage.src = imgElement.src; // Imposta l'immagine ingrandita
-    enlargedContainer.style.display = 'flex'; // Mostra il contenitore ingrandito
-});
-
-// Funzione per chiudere l'immagine ingrandita
-closeButton.addEventListener('click', () => {
-    enlargedContainer.style.display = 'none'; // Nascondi il contenitore ingrandito
-});
-
 // Funzione per gestire il pulsante "Precedente" nel contenitore ingrandito
 prevButton.addEventListener('click', () => {
     if (currentIndex > 0) {
