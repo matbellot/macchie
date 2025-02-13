@@ -3,10 +3,6 @@ const imgElement = document.getElementById('image');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 
-const enlargedContainer = document.getElementById('enlarged-container');
-const enlargedImage = document.getElementById('enlarged-image');
-const closeButton = document.getElementById('close');
-
 const images = [
     'Rorschach01.jpg', 
     'Rorschach02.jpg', 
@@ -24,7 +20,7 @@ let currentIndex = 0;
 
 // Funzione per aggiornare l'immagine visualizzata
 function updateImage() {
-    imgElement.src = `images/${images[currentIndex]}`;
+    imgElement.src = `images/${images[currentIndex]}`; // Aggiorna l'immagine
 }
 
 // Funzione per caricare l'immagine iniziale
@@ -32,25 +28,18 @@ function loadImages() {
     updateImage();
 }
 
-// Funzione per gestire il pulsante "Precedente" nel contenitore ingrandito
+// Gestione dei pulsanti "Precedente" e "Successivo"
 prevButton.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
-        updateImage();
-        if (enlargedContainer.style.display === 'flex') {
-            enlargedImage.src = `images/${images[currentIndex]}`; // Aggiorna l'immagine ingrandita
-        }
+        updateImage(); // Aggiorna l'immagine
     }
 });
 
-// Funzione per gestire il pulsante "Successivo" nel contenitore ingrandito
 nextButton.addEventListener('click', () => {
     if (currentIndex < images.length - 1) {
         currentIndex++;
-        updateImage();
-        if (enlargedContainer.style.display === 'flex') {
-            enlargedImage.src = `images/${images[currentIndex]}`; // Aggiorna l'immagine ingrandita
-        }
+        updateImage(); // Aggiorna l'immagine
     }
 });
 
